@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -27,10 +29,10 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 	// 存放view
 	private ArrayList<View> views;
 	// 引导图片资源
-	private static final int[] pics = { R.drawable.app_icon,
-			R.drawable.ic_launcher, R.drawable.logo };
+	private static final int[] pics = { R.drawable.user_home_guide1,
+			R.drawable.user_home_guide2, R.drawable.user_home_guide3 };
 	//最后一张图片资源的id
-	private static final int picId=R.drawable.wpcom;
+	private static final int picId=R.drawable.user_home_guide4;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +78,7 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 			views.add(iv);
 		}
 		/*
-		 * 最后一页欢迎页面，多出一个ImageButton,点击之后进入主界面
+		 * 最后一页欢迎页面，多出一个ImageView,点击之后进入主界面
 		 */
 		LinearLayout layout=new LinearLayout(getApplicationContext());
 		layout.setLayoutParams(mParams);
@@ -86,12 +88,12 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 		lastImageView.setLayoutParams(imgParams);
 		lastImageView.setImageResource(picId);
 		//按钮
-		Button mButton=new Button(getApplicationContext());
-		mButton.setLayoutParams(btnParams);
-		mButton.setText("马上体验");
-		mButton.setBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));
+		ImageView mImgView=new ImageView(getApplicationContext());
+		mImgView.setLayoutParams(btnParams);
+		mImgView.setImageResource(R.drawable.user_home_lijitiyan);
+		//mButton.setBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));
 		//点击按钮后进入登录页面，只有第一次进入时才会出现引导页面，否则直接进入登录页面
-		mButton.setOnClickListener(new OnClickListener() {
+		mImgView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -102,7 +104,7 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 		});
 		//把图片和图片按钮添加到layout
 		layout.addView(lastImageView);
-		layout.addView(mButton);
+		layout.addView(mImgView);
 		//把layout添加到views
 		views.add(layout);
 		

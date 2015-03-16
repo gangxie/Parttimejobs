@@ -63,7 +63,7 @@ public class MyPost {
 	public String doPost(String url, Map<String, String> nameValueMap) {
 		String result = null;
 		HttpResponse httpResponse = null;
-		HttpPost post = new HttpPost(Model.HTTPURL + url);
+		HttpPost post = new HttpPost(url);
 		DefaultHttpClient client = new DefaultHttpClient();
 		client.getParams().setIntParameter(HttpConnectionParams.SO_TIMEOUT,
 				30000); // ≥¨ ±…Ë÷√
@@ -75,6 +75,7 @@ public class MyPost {
 
 			nameValuePairs.add(new BasicNameValuePair(en.getKey(), en
 					.getValue()));
+			Log.i("key", en.getKey());
 		}
 		/*
 		 * nameValuePairs.add(new BasicNameValuePair("mycode", mycode));

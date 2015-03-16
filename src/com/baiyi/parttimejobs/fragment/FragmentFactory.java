@@ -9,8 +9,11 @@ public class FragmentFactory {
 		case 1:
 			fragment = new UserHomeFragment();
 			break;
-		default:
+		case 2:
 			fragment = new FuJinFragment();
+			break;
+		case 3:
+			fragment = new MineFragment();
 			break;
 
 		}
