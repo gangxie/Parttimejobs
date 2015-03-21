@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -16,7 +19,10 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 
 import com.baiyi.parttimejobs.R;
 
@@ -32,8 +38,14 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 	private static final int[] pics = { R.drawable.user_home_guide1,
 			R.drawable.user_home_guide2, R.drawable.user_home_guide3 };
 	//最后一张图片资源的id
-	private static final int picId=R.drawable.user_home_guide4;
 
+   private RadioButton button1;
+   private RadioButton button2;
+   private RadioButton button3;
+
+   
+   private RadioButton[] buttons={null,null,null};
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
@@ -43,6 +55,8 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 		mViewPager = (ViewPager) findViewById(R.id.ViewPager);
 		initView();
 		initData();
+		 
+		
 		
 	}
 
@@ -53,6 +67,17 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 		views = new ArrayList<View>();
 		mViewPager = (ViewPager) findViewById(R.id.ViewPager);
 		vpAdapter = new ViewPagerAdapter(views);
+		
+		button1=(RadioButton)this.findViewById(R.id.activity_welcome_cursor1);
+		button2=(RadioButton)this.findViewById(R.id.activity_welcome_cursor2);
+		button3=(RadioButton)this.findViewById(R.id.activity_welcome_cursor3);
+		
+		 buttons[0]=button1;
+		 buttons[1]=button2;
+		 buttons[2]=button3;
+		 button1.setChecked(true);
+	
+		
 
 	}
 
@@ -63,53 +88,35 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 		LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(
 				LinearLayout.LayoutParams.MATCH_PARENT,
 				LinearLayout.LayoutParams.MATCH_PARENT);
-		LinearLayout.LayoutParams imgParams = new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.MATCH_PARENT,
-				LinearLayout.LayoutParams.MATCH_PARENT,1.0f);
-		LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.MATCH_PARENT,
-				LinearLayout.LayoutParams.MATCH_PARENT,7.0f);
-		btnParams.setMargins(10, 10, 10, 10);
-		// 初始化引导图片列表.
+	
 		for (int i = 0; i < pics.length; i++) {
 			ImageView iv = new ImageView(getApplicationContext());
+			iv.setScaleType(ScaleType.FIT_XY);
 			iv.setLayoutParams(mParams);
+			
 			iv.setImageResource(pics[i]);
 			views.add(iv);
 		}
-		/*
-		 * 最后一页欢迎页面，多出一个ImageView,点击之后进入主界面
-		 */
-		LinearLayout layout=new LinearLayout(getApplicationContext());
-		layout.setLayoutParams(mParams);
-		layout.setOrientation(LinearLayout.VERTICAL);
-		//图片资源
-		ImageView lastImageView=new ImageView(getApplicationContext());
-		lastImageView.setLayoutParams(imgParams);
-		lastImageView.setImageResource(picId);
-		//按钮
-		ImageView mImgView=new ImageView(getApplicationContext());
-		mImgView.setLayoutParams(btnParams);
-		mImgView.setImageResource(R.drawable.user_home_lijitiyan);
-		//mButton.setBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));
-		//点击按钮后进入登录页面，只有第一次进入时才会出现引导页面，否则直接进入登录页面
+		
+	  LayoutInflater inflater=this.getLayoutInflater();
+	  View view=inflater.inflate(R.layout.activity_welcome_lastview, null);
+	 ImageView mImgView=(ImageView)view.findViewById(R.id.activity_welcome_button);
+	
 		mImgView.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+				Intent intent=new Intent(getApplicationContext(),activity_login_firstActivity.class);
 				startActivity(intent);
 				
 			}
 		});
-		//把图片和图片按钮添加到layout
-		layout.addView(lastImageView);
-		layout.addView(mImgView);
-		//把layout添加到views
-		views.add(layout);
+	   Log.v("daole2","daole ");
+		views.add(view);
 		
 		mViewPager.setAdapter(vpAdapter);
 		mViewPager.setOnPageChangeListener(this);
+		
 
 	}
 
@@ -121,6 +128,8 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 			return;
 		}
 		mViewPager.setCurrentItem(position);
+		
+		
 	}
 
 	@Override
@@ -132,12 +141,24 @@ public class WelcomeViewpaper extends BaseActivity implements View.OnClickListen
 	@Override
 	public void onPageScrolled(int arg0, float arg1, int arg2) {
 		// TODO Auto-generated method stub
+	
+		
 
 	}
 
 	@Override
 	public void onPageSelected(int arg0) {
 		// TODO Auto-generated method stub
+		if(arg0==3){
+			buttons[0].setVisibility(View.GONE);
+			buttons[1].setVisibility(View.GONE);
+			buttons[2].setVisibility(View.GONE);
+		}else{
+			buttons[0].setVisibility(View.VISIBLE);
+			buttons[1].setVisibility(View.VISIBLE);
+			buttons[2].setVisibility(View.VISIBLE);
+		buttons[arg0].setChecked(true);}
+		
 
 	}
 

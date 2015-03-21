@@ -82,10 +82,7 @@
             android:name=".activity.WelcomeViewpaper"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:screenOrientation="portrait" >
-        </activity>
+       
         <activity
             android:name=".activity.QuickPublishJobs"
             android:screenOrientation="portrait" >
@@ -108,11 +105,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.NoActionBar" >
         </activity>
-        <activity
-            android:name=".activity.MainTabActivity"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.NoActionBar" >
-        </activity>
+     
         <activity
             android:name=".activity.FuWuYuanActivity"
             android:screenOrientation="portrait"
@@ -148,7 +141,41 @@
             android:screenOrientation="portrait"
             android:theme="@style/FeelyouWindowAnimTheme" >
         </activity>
-
+        <activity android:name=".activity.GetBackPasswordActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
+        <activity android:name=".activity.QiyeRegisterActivity"
+                   android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
+          <activity android:name=".activity.QiuzhizheRegisterActivity"
+                   android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
+          <activity android:name=".activity.activity_login_firstActivity"
+                    android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
+          <activity android:name=".activity.activity_login_second_personActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
+          <activity android:name=".activity.activity_login_second_companyActivity"
+                android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
+          <activity android:name=".activity.MaintabActivity"
+                     android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"
+                  ></activity>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

@@ -23,12 +23,12 @@ public class WelcomeActivity extends BaseActivity {
 
 		public void handleMessage(Message msg) {
 			//如果是第一进入则跳过引导页面
-			if(isFrist){
+			/*if(isFrist){*/
 				intent = new Intent(getApplicationContext(),
 						WelcomeViewpaper.class);
-			}else{
+			/*}else{
 				intent = new Intent(getApplicationContext(),LoginActivity.class);
-			}
+			}*/
 			
 			startActivity(intent);
 		};

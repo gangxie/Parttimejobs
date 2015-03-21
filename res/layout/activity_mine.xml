@@ -5,9 +5,9 @@
     android:background="@drawable/user_home_mine_bg" >
 
     <RelativeLayout
-        android:id="@+id/activity_mine_title"
+        android:id="@+id/title_name_mine"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/title_blue" >
 
         <TextView
@@ -21,11 +21,11 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_below="@id/activity_mine_title"
-        android:id="@+id/button1"
+        android:layout_below="@+id/activity_mine_title"
+        android:id="@+id/userinfo_mine_button1"
         android:layout_width="fill_parent"
         android:layout_height="80dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="72dp"
         android:background="#FFFFFFFF" >
 
         <ImageView
@@ -51,13 +51,14 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="130dp"
-        android:background="#FFFFFFFF" >
+        android:layout_marginTop="180dp"
+        >
 
         <RelativeLayout
-            android:id="@+id/button2"
+            android:id="@+id/userinfo_mine_button2"
             android:layout_width="fill_parent"
-            android:layout_height="34dp" >
+            android:layout_height="38dp" 
+             android:background="#FFFFFFFF">
 
             <ImageView
                 android:id="@+id/needle1"
@@ -88,17 +89,13 @@
             </ImageView>
         </RelativeLayout>
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:layout_below="@+id/button2"
-            android:src="@drawable/user_home_mine_divider" >
-        </ImageView>
-
+     
         <RelativeLayout
-            android:id="@+id/button3"
+            android:id="@+id/userinfo_mine_button3"
+            android:layout_marginTop="40dp"
             android:layout_width="fill_parent"
-            android:layout_height="34dp"
+            android:layout_height="38dp"
+            android:background="#FFFFFFFF"
             android:layout_below="@+id/button2" >
 
             <ImageView
@@ -134,13 +131,14 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="70dp"
-        android:layout_marginTop="228dp"
-        android:background="#FFFFFFFF" >
+        android:layout_marginTop="270dp"
+         >
 
         <RelativeLayout
-            android:id="@+id/button4"
+            android:id="@+id/userinfo_mine_button4"
             android:layout_width="fill_parent"
-            android:layout_height="34dp" >
+            android:background="#FFFFFFFF"
+            android:layout_height="38dp" >
 
             <ImageView
                 android:id="@+id/clock1"
@@ -171,17 +169,14 @@
             </ImageView>
         </RelativeLayout>
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:layout_below="@+id/button4"
-            android:src="@drawable/user_home_mine_divider" >
-        </ImageView>
+       
 
         <RelativeLayout
-            android:id="@+id/button5"
+            android:id="@+id/userinfo_mine_button5"
             android:layout_width="fill_parent"
-            android:layout_height="34dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="40dp"
+             android:background="#FFFFFFFF"
             android:layout_below="@+id/button4" >
 
             <ImageView
@@ -217,14 +212,16 @@
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="326dp"
-        android:background="#FFFFFFFF" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+         >
 
         <RelativeLayout
-            android:id="@+id/button6"
+            android:id="@+id/userinfo_mine_button6"
             android:layout_width="fill_parent"
-            android:layout_height="34dp" >
+            android:background="#FFFFFFFF"
+        
+            android:layout_height="38dp" >
 
             <ImageView
                 android:id="@+id/rubbish1"
@@ -255,19 +252,16 @@
             </ImageView>
         </RelativeLayout>
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:layout_below="@+id/button6"
-            android:src="@drawable/user_home_mine_divider" >
-        </ImageView>
-    </RelativeLayout>
+      
+   
 
     <RelativeLayout
-        android:id="@+id/button7"
+        android:id="@+id/userinfo_mine_button7"
+        android:layout_marginTop="40dp"
         android:layout_width="fill_parent"
-        android:layout_height="34dp"
-        android:layout_alignBottom="@+id/relativeLayout1"
+        android:layout_height="38dp"
+         android:background="#FFFFFFFF"
+     
         android:layout_alignParentLeft="true" >
 
         <ImageView
@@ -297,5 +291,6 @@
             android:layout_marginRight="20dp"
             android:src="@drawable/user_home_mine_arrow_right" />
     </RelativeLayout>
+     </RelativeLayout>
 
 </RelativeLayout>

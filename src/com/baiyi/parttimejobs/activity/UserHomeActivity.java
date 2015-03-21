@@ -34,7 +34,7 @@ public class UserHomeActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_user_home);
-		initView();
+	/*initView();*/
 		addNewJobs();
 		addYouFavour();
 
@@ -117,9 +117,9 @@ public class UserHomeActivity extends BaseActivity {
 		mLayout.addView(mView3);
 	}
 
-	private void initView() {
+/*	private void initView() {
 		mLayout = (LinearLayout) findViewById(R.id.user_home_partitmejobs_icon_container);
 		mLayout2 = (LinearLayout) findViewById(R.id.user_home_favourite_container);
 	}
-
+*/
 }
