@@ -15,5 +15,6 @@
     <color name="calendar_color_white">#ffffff</color>
     <color name="title_blue">#18b4ed</color>
     <color name="bottom_gray">#EFEFEF</color>
+    <color name="text_grey">#C0C0C0</color>
 
 </resources>

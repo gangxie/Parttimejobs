@@ -176,6 +176,18 @@
                   android:theme="@style/FeelyouWindowAnimTheme"
                   android:launchMode="singleTask"
                   ></activity>
+          <activity android:name=".activity.mine_personalinfoActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
+               <activity android:name=".activity.mine_personal_timeActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
+                <activity android:name=".activity.mineMyCollectionActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
