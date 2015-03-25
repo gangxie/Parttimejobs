@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 
 public class HomeActivity extends BaseActivity {
@@ -19,25 +20,26 @@ public class HomeActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_home);
-		initView();
+	/*	initView();
 		MyBtnOnclickListener mOnclickListener = new MyBtnOnclickListener();
 		// 快速发布兼职事件
 		homePublishJobs.setOnClickListener(mOnclickListener);
 		//兼职管理
-		homeManageJobs.setOnClickListener(mOnclickListener);
+		homeManageJobs.setOnClickListener(mOnclickListener);*/
 	}
 
 	// 初始化系统组件
-	private void initView() {
+/*	private void initView() {
 
 		homePublishJobs = (Button) findViewById(R.id.home_publish_jobs);
 		homeManageJobs=(Button) findViewById(R.id.home_manage_jobs);
 	}
+*/
+	/*class MyBtnOnclickListener implements OnClickListener {
 
-	class MyBtnOnclickListener implements OnClickListener {
-
-		@Override
+	@Override
 		public void onClick(View v) {
 			if (v == homePublishJobs) {//快速发布兼职
 				Intent intent = new Intent(getApplicationContext(),
@@ -50,7 +52,7 @@ public class HomeActivity extends BaseActivity {
 			}
 		}
 
-	}
+	}*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/title_blue" >
-
+      
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,8 +70,9 @@
             </ImageView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                
                 android:layout_alignBottom="@+id/needle1"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/needle1"
@@ -108,8 +109,9 @@
             </ImageView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/mine_application"
                 android:layout_alignBottom="@+id/appli"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@+id/appli"

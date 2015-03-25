@@ -16,5 +16,5 @@
     <color name="title_blue">#18b4ed</color>
     <color name="bottom_gray">#EFEFEF</color>
     <color name="text_grey">#C0C0C0</color>
-
+    <color name="text_red">#ff7777</color>
 </resources>

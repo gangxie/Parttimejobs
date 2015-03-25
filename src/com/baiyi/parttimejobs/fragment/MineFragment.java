@@ -13,6 +13,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.baiyi.parttimejobs.R;
+import com.baiyi.parttimejobs.activity.Mine_MyApplicationActivity;
 import com.baiyi.parttimejobs.activity.mineMyCollectionActivity;
 import com.baiyi.parttimejobs.activity.mine_personalinfoActivity;
 
@@ -20,11 +21,14 @@ public class MineFragment extends Fragment {
    
 	private View personalInfo;
 	private View mycollection;
+	private TextView myapplication;
+	
 	View view;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		   view = inflater.inflate(R.layout.activity_mine, null);
 	     initView();
+	     setListener();
 		return view;
 	}
    
@@ -33,30 +37,46 @@ public class MineFragment extends Fragment {
 		
 		mycollection=(View)view.findViewById(R.id.userinfo_mine_button2);
 		personalInfo=(View)view.findViewById(R.id.userinfo_mine_button1);
-		mycollection.setOnClickListener(new OnClickListener(){
-		       
-					@Override
-					public void onClick(View arg0) {
-						// TODO Auto-generated method stub
-						Intent intent=new Intent(getActivity(),mineMyCollectionActivity.class);
-						getActivity().startActivity(intent);
-					}
-					
-				});
+		myapplication=(TextView)view.findViewById(R.id.mine_application);
+	
 		
-		personalInfo.setOnClickListener(new OnClickListener(){
-       
-			@Override
-			public void onClick(View arg0) {
-				// TODO Auto-generated method stub
-				Intent intent=new Intent(getActivity(),mine_personalinfoActivity.class);
-				getActivity().startActivity(intent);
-			}
-			
-		});
 	}
 
+      public void setListener(){
+    	  mycollection.setOnClickListener(new OnClickListener(){
+		       
+				@Override
+				public void onClick(View arg0) {
+					// TODO Auto-generated method stub
+					Intent intent=new Intent(getActivity(),mineMyCollectionActivity.class);
+					getActivity().startActivity(intent);
+				}
+				
+			});
+	
+	personalInfo.setOnClickListener(new OnClickListener(){
+ 
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent=new Intent(getActivity(),mine_personalinfoActivity.class);
+			getActivity().startActivity(intent);
+		}
+		
+	});
+	
+	myapplication.setOnClickListener(new OnClickListener(){
 
+		@Override
+		public void onClick(View arg0) {
+			// TODO Auto-generated method stub
+			Intent intent=new Intent(getActivity(),Mine_MyApplicationActivity.class);
+			getActivity().startActivity(intent);
+		}
+		
+	});
+	
+      }
  
   
 }

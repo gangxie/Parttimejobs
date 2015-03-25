@@ -4,7 +4,7 @@
     android:versionName="1.0" >
 
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
-
+    <uses-permission android:name="android.permission.CALL_PHONE"  ></uses-permission> 
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
     </uses-permission>
@@ -173,21 +173,40 @@
                   ></activity>
           <activity android:name=".activity.MaintabActivity"
                      android:screenOrientation="portrait"
-                  android:theme="@style/FeelyouWindowAnimTheme"
-                  android:launchMode="singleTask"
+                     android:theme="@style/FeelyouWindowAnimTheme"
+                    android:launchMode="singleTask"
                   ></activity>
           <activity android:name=".activity.mine_personalinfoActivity"
                       android:screenOrientation="portrait"
-                  android:theme="@style/FeelyouWindowAnimTheme"
-                  android:launchMode="singleTask"></activity>
+                      android:theme="@style/FeelyouWindowAnimTheme"
+                      android:launchMode="singleTask"></activity>
                <activity android:name=".activity.mine_personal_timeActivity"
                       android:screenOrientation="portrait"
-                  android:theme="@style/FeelyouWindowAnimTheme"
-                  android:launchMode="singleTask"></activity>
+                      android:theme="@style/FeelyouWindowAnimTheme"
+                      android:launchMode="singleTask"></activity>
                 <activity android:name=".activity.mineMyCollectionActivity"
                       android:screenOrientation="portrait"
                   android:theme="@style/FeelyouWindowAnimTheme"
                   android:launchMode="singleTask"></activity>
+                <activity android:name=".activity.userhome_jianzhiListActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
+                <activity android:name=".activity.Jianzhixiangqing"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
+                <activity android:name=".activity.QiuzhiyixiangActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
+                  <activity android:name=".activity.Mine_MyApplicationActivity"
+                      android:screenOrientation="portrait"
+                  android:theme="@style/FeelyouWindowAnimTheme"
+                  android:launchMode="singleTask"></activity>
+                
+                
+               
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

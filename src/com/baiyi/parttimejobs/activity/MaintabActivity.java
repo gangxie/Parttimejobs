@@ -25,19 +25,20 @@ public class MaintabActivity extends FragmentActivity{
 	private RadioButton near;
 	private RadioButton mine;
 	public  void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
-		Log.v("1111","1111");
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_user_home_bottom_tab);
 	
 		
-		Log.v("3333","1111");
+
 		fragmentManager = getSupportFragmentManager();
 		FragmentTransaction transaction = fragmentManager.beginTransaction();
 		Fragment fragment = FragmentFactory.getInstanceByIndex(1);
 		transaction.replace(R.id.user_home_content, fragment);
 		transaction.commit();
-		Log.v("4444","1111");
+		
 		jianzhi=(RadioButton)this.findViewById(R.id.maintab_tab_jianzhi);
 		near=(RadioButton)this.findViewById(R.id.maintab_tab_near);
 		mine=(RadioButton)this.findViewById(R.id.maintab_tab_mine);
@@ -108,6 +109,7 @@ public boolean onKeyDown(int keyCode, KeyEvent event) {
 			AppManager.getAppManager().AppExit(this);
 		}
 	}
+
 
 
 }

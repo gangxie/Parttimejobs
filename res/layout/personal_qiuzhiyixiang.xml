@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:orientation="vertical"
+                 android:background="#FFFFFF"
+                 >
+    <RelativeLayout  android:layout_width="match_parent"
+                    android:background="@color/title_blue"
+                    android:layout_height="50dp"
+                    >
+                 <ImageView android:src="@drawable/back_button"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="60dp"
+                        android:layout_height="23dp"
+                        android:id="@+id/qiuzhiyixiang_back_button"
+                        android:layout_marginLeft="10dp"></ImageView>
+        <TextView  android:layout_centerInParent="true"
+                   android:text="求职意向"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   
+                   android:textColor="#FFFFFF"
+                   android:textSize="20dp"/>
+        <Button    android:text="提交"
+                   android:textSize="15dp"
+                   android:background="#00FFFFFF"
+                   android:layout_centerVertical="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="10dp"
+                   android:textColor="#FFFFFF"
+                   android:id="@+id/qiuzhiyixiang_submit"></Button>
+        
+        
+    </RelativeLayout>
+    
+   
+     <RelativeLayout android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+               
+        <CheckBox  android:button="@drawable/qiuzhiyixiang_campus"
+                   android:id="@+id/personal_qiuzhi_campus"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                   />
+         <CheckBox  android:button="@drawable/qiuzhiyixiang_waiter"
+                   android:id="@+id/personal_qiuzhi_waiter"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                   />
+            <CheckBox  android:button="@drawable/qiuzhiyixiang_liyi"
+                   android:id="@+id/personal_qiuzhi_liyi"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   />
+         
+     </RelativeLayout>
+     <RelativeLayout android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+        <CheckBox  android:button="@drawable/qiuzhiyixiang_daili"
+                   android:id="@+id/personal_qiuzhi_daili"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentLeft="true"
+                   />
+         <CheckBox  android:button="@drawable/qiuzhiyixiang_hometeach"
+                   android:id="@+id/personal_qiuzhi_hometeach"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_centerInParent="true"
+                   />
+            <CheckBox  android:button="@drawable/qiuzhiyixiang_leaflet"
+                   android:id="@+id/personal_qiuzhi_leaflet"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   />
+    </RelativeLayout>
+     <RelativeLayout android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+        <CheckBox  android:button="@drawable/qiuzhiyixiang_cuxiao"
+                   android:id="@+id/personal_qiuzhi_cuxiao"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentLeft="true"></CheckBox>
+   
+    </RelativeLayout>
+    
+    <TextView android:text="注：请勾选自己适合的兼职种类并提交"
+              android:textColor="@color/text_grey"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/generalTextSize"
+              android:layout_marginLeft="5dp"
+              android:layout_marginTop="5dp"></TextView>
+</LinearLayout>
+                 

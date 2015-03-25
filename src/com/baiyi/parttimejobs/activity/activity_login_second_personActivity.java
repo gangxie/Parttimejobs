@@ -5,6 +5,7 @@ import com.baiyi.parttimejobs.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.View.OnClickListener;
@@ -130,6 +131,8 @@ public class activity_login_second_personActivity extends Activity{
 				*/
 					Intent intent = new Intent(getApplicationContext(),
 							MaintabActivity.class);
+			        
+					
 					startActivity(intent);	
 				}
 			}

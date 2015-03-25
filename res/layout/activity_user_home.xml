@@ -139,7 +139,31 @@
                 android:padding="0dp"
                 android:src="@drawable/user_home_zuixinjianzhi_icon" />
       
-
+   <LinearLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+           <RelativeLayout android:id="@+id/userhome_newest_1"
+                           android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:layout_height="100dp"
+                           android:background="#FF00FF">
+            
+           </RelativeLayout>
+           <RelativeLayout android:id="@+id/userhome_newest_2"
+                            android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:layout_height="100dp"
+                           android:background="#FFFF00">
+               
+           </RelativeLayout>
+          
+           <RelativeLayout android:id="@+id/userhome_newest_3"
+                            android:layout_width="0dp"
+                           android:layout_weight="1"
+                           android:layout_height="100dp"
+                           android:background="#FF0000">
+               
+           </RelativeLayout>
+   </LinearLayout>
      
 
       
@@ -160,7 +184,8 @@
                 android:layout_margin="0dp"
                 android:padding="0dp"
                 android:src="@drawable/user_home_cainixihuan_icon" />
-    
+          
+       
    
 
 </LinearLayout>
